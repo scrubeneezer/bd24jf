@@ -73,7 +73,7 @@ export class AppComponent implements OnInit {
     const index1 = (this.seed + value) % this.asteri.length;
     const index2 = Math.abs(this.seed - value) % this.asteri.length;
     const index3 = (this.seed * value) % this.asteri.length;
-    const index4 = Math.floor((this.seed * 10) / value) % this.asteri.length;
+    const index4 = Math.floor((this.seed * 10) / value) + this.seed % this.asteri.length;
 
     return [
       this.asteri[index1],
